@@ -1,0 +1,5 @@
+node_modules/
+music/
+*.log
+.env
+.DS_Store
