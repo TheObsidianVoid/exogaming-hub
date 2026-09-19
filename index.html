@@ -1,240 +1,138 @@
 <!doctype html>
-
-
-
 <html lang="en">
-
-
-
 <head>
-
-
-
   <meta charset="utf-8" />
-
-
-
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-
-
-  <title>My Games Portal</title>
-
-
-
-  <meta name="description" content="Play web games — fast access to all games on this site." />
-
-
+  <title>Games Portal</title>
+  <meta
+    name="description"
+    content="Play web games — fast access to all games on this site."
+  />
 
   <link rel="stylesheet" href="styles.css" />
-
-
-
 </head>
 
-
-
 <body>
-
-
+  <div class="background-grid"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
   <header class="site-header">
-
-
-
     <div class="container">
 
+      <div class="hero">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          ARCADE ONLINE
+        </div>
 
+        <h1 class="site-title">
+          <span>GAME</span>
+          <strong>PORTAL</strong>
+        </h1>
 
-      <h1 class="site-title">Games Portal</h1>
+        <p class="site-subtitle">
+          A collection of tiny worlds, strange experiments,
+          and games worth wasting a few minutes on.
+        </p>
+      </div>
 
+      <form
+        id="controls"
+        class="controls"
+        role="search"
+        aria-label="Search and filter games"
+      >
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
 
+          <label for="search" class="visually-hidden">
+            Search games
+          </label>
 
-      <p class="site-subtitle">Quick access to all of my web games on this site</p>
+          <input
+            id="search"
+            name="search"
+            type="search"
+            placeholder="Search games..."
+            aria-label="Search games"
+            autocomplete="off"
+          />
+        </div>
 
+        <label for="category" class="visually-hidden">
+          Filter by category
+        </label>
 
-
-
-
-
-
-      <form id="controls" class="controls" role="search" aria-label="Search and filter games">
-
-
-
-        <label for="search" class="visually-hidden">Search games</label>
-
-
-
-        <input id="search" name="search" type="search" placeholder="Search games…" aria-label="Search games" />
-
-
-
-
-
-
-
-        <label for="category" class="visually-hidden">Filter by category</label>
-
-
-
-        <select id="category" name="category" aria-label="Filter games by category">
-
-
-
+        <select
+          id="category"
+          name="category"
+          aria-label="Filter games by category"
+        >
           <option value="">All categories</option>
-
-
-
         </select>
 
+        <label for="directory" class="visually-hidden">
+          Filter games by directory
+        </label>
 
-
-
-
-
- <select id="directory" name="directory" aria-label="Filter games by directory">
-
-
-   
-
-
-
-
-
+        <select
+          id="directory"
+          name="directory"
+          aria-label="Filter games by directory"
+        >
           <option value="">All directories</option>
-
-
-
-
-
         </select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
       </form>
-
-
-
     </div>
-
-
-
   </header>
-
-
-
-
-
-
 
   <main class="container" id="main">
 
-
-
-    <p class="notice js-only" aria-hidden="true">Void bootstrapper disabled for your safty :)</p>
-
-
-
-
-
-
+    <p class="notice js-only" aria-hidden="true">
+      Void bootstrapper disabled for your safety :)
+    </p>
 
     <noscript>
-
-
-
-      <p class="notice">JavaScript is disabled — enable JavaScript to see the dynamic games list. You can still browse the /games directory directly to find games.</p>
-
-
-
+      <p class="notice">
+        JavaScript is disabled — enable JavaScript to see the dynamic games
+        list. You can still browse the /games directory directly to find games.
+      </p>
     </noscript>
 
-
-
-
-
-
-
     <section aria-labelledby="games-heading">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">COLLECTION</span>
+          <h2 id="games-heading">Choose your game</h2>
+        </div>
 
+        <div class="section-line"></div>
+      </div>
 
-
-      <h2 id="games-heading" class="visually-hidden">Games</h2>
-
-
-
-
-
-
-
-      <!-- The JavaScript will populate this list from games.json -->
-
-
-
-      <ul id="games" class="games-grid" role="list" aria-live="polite"></ul>
-
-
-
+      <!-- Populated by scripts.js -->
+      <ul
+        id="games"
+        class="games-grid"
+        role="list"
+        aria-live="polite"
+      ></ul>
     </section>
-
-
-
   </main>
 
-
-
-
-
-
-
   <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>
+        <span>©</span>
+        <span id="year"></span>
+        MY GAMES PORTAL
+      </small>
 
-
-
-    <div class="container">
-
-
-
-      <small>&copy; <span id="year"></span> My Games Portal — All rights reserved.</small>
-
-
-
+      <span class="footer-decoration">INSERT COIN ▸</span>
     </div>
-
-
-
   </footer>
 
-
-
-
-
-
-
   <script src="scripts.js" defer></script>
-
-
-
 </body>
-
-
-
-
 </html>
